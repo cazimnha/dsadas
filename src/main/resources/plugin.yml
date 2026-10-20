@@ -1,0 +1,18 @@
+name: NetherEvent
+version: 1.0.0
+main: com.freakcircus.netherevent.NetherEventPlugin
+api-version: '1.21'
+author: TheFreakCircus
+description: Mantem o Nether fechado e so o libera durante eventos temporarios.
+commands:
+  nether:
+    description: Gerencia o evento do Nether.
+    usage: |
+      /nether start [minutos] - abre o Nether por X minutos (padrao da config)
+      /nether stop - fecha o Nether imediatamente
+      /nether status - mostra se o Nether esta aberto e quanto tempo falta
+    permission: netherevent.admin
+permissions:
+  netherevent.admin:
+    description: Permite controlar o evento do Nether.
+    default: op

@@ -1,0 +1,32 @@
+# ======================================================
+#  NetherEvent - configuracao
+# ======================================================
+
+# Duracao padrao do evento em minutos (usada quando voce digita /nether start sem numero)
+default-duration-minutes: 15
+
+# Aviso em minutos antes do evento acabar (avisa os jogadores que o Nether vai fechar)
+warn-before-end-minutes: 1
+
+# ------------------------------------------------------
+#  Evento automatico
+# ------------------------------------------------------
+# Se true, o plugin abre o Nether sozinho de tempos em tempos.
+auto-event:
+  enabled: false
+  # A cada quantos minutos tentar abrir um evento automatico
+  interval-minutes: 120
+  # Duracao do evento automatico em minutos
+  duration-minutes: 15
+  # Chance (0.0 a 1.0) de o evento acontecer quando chegar o intervalo. 1.0 = sempre.
+  chance: 0.5
+
+# ------------------------------------------------------
+#  Mensagens
+# ------------------------------------------------------
+messages:
+  prefix: "&6[Nether] &r"
+  blocked: "&cO Nether esta fechado! Ele so abre durante eventos especiais."
+  event-start: "&aO portal do Nether foi aberto! Aproveite enquanto dura!"
+  event-warn: "&eO Nether vai fechar em %minutes% minuto(s)! Volte para o Overworld!"
+  event-end: "&cO evento do Nether acabou. O portal foi fechado."
