@@ -1,0 +1,26 @@
+name: Build NetherEvent
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+          cache: maven
+
+      - name: Compilar
+        run: mvn -B package
+        working-directory: NetherEvent
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: NetherEvent
+          path: NetherEvent/target/NetherEvent.jar
